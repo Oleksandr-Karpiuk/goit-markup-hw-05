@@ -140,9 +140,11 @@ ul {
 
 .link.link-active::after {
   content: "";
+
   position: absolute;
   left: 0;
   bottom: 0;
+
   display: block;
   margin-bottom: -1px;
   width: 100%;
@@ -509,6 +511,7 @@ ul {
 }
 
 .backdrop.is-hidden {
+  visibility: hidden;
   opacity: 0;
   pointer-events: none;
 }
@@ -533,12 +536,12 @@ ul {
   top: 8px;
   right: 8px;
 
-  width: 30px;
-  height: 30px;
-
   display: flex;
   justify-content: center;
   align-items: center;
+
+  width: 30px;
+  height: 30px;
 
   background-color: var(--white-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
