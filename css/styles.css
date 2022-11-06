@@ -9,6 +9,7 @@
   --white-color: #ffffff;
   --address-color: rgba(255, 255, 255, 0.6);
   --icons-color: #afb1b8;
+  --overlay-portfolio: rgba(33, 150, 243, 0.9);
   --duration: 250ms;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -655,4 +656,31 @@ ul {
 
 .portfolio-link {
   text-decoration: none;
+}
+
+.portfolio-wrapper {
+  position: relative;
+}
+
+.overlay-portfolio {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--overlay-portfolio);
+}
+
+.overlay-description {
+  padding: 24px;
+
+  font-size: 18px;
+  line-height: 1.56;
+
+  color: var(--white-color);
 }
