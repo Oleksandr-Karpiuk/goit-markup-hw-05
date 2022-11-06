@@ -658,14 +658,20 @@ ul {
   text-decoration: none;
 }
 
+/* ===================================== 
+   АНІМАЦІЯ OVERLAY ДЛЯ КАРТОК PORTFOLIO 
+   =====================================*/
 .portfolio-wrapper {
   position: relative;
+  overflow: hidden;
 }
 
 .overlay-portfolio {
   position: absolute;
   top: 0;
   left: 0;
+
+  transform: translateY(100%);
 
   display: flex;
   align-items: center;
@@ -674,10 +680,18 @@ ul {
   height: 100%;
 
   background-color: var(--overlay-portfolio);
+
+  transition: transform var(--duration) var(--timing-function);
+}
+
+.portfolio-item:hover .overlay-portfolio,
+.portfolio-item:focus .overlay-portfolio {
+  transform: translateY(0);
 }
 
 .overlay-description {
-  padding: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
 
   font-size: 18px;
   line-height: 1.56;
